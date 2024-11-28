@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // ------------------------   BOTÃO PARA TRADUZIR -----------
-   const traducao = ` O Dia de Ação de Graças, em inglês “Thanksgiving Day ”, é comemorado todos os anos na 4ª quinta-feira de novembro, servindo como lembrete do valor da gratidão. Assim, esse é um dia de agradecimento, em que as famílias se reúnem e recordam - com gratidão a Deus - as coisas boas que aconteceram ao longo do ano.
+   const portugues = ` O Dia de Ação de Graças, em inglês “Thanksgiving Day ”, é comemorado todos os anos na 4ª quinta-feira de novembro, servindo como lembrete do valor da gratidão. Assim, esse é um dia de agradecimento, em que as famílias se reúnem e recordam - com gratidão a Deus - as coisas boas que aconteceram ao longo do ano.
 
     Origem:
     No século XVI, em Plymouth Colony, Massachusetts, região chamada de Nova Inglaterra, os habitantes da vila realizaram uma festa para comemorar a colheita dos alimentos daquele ano. Isso porque eles passaram por invernos muito rigorosos.
@@ -38,9 +38,66 @@ document.addEventListener('DOMContentLoaded', function() {
     Outros países que comemoram o Dia de Ação de Graças são: 
     Granada (Caribe), Libéria (África), Ilha Norfolk (Austrália) e Holanda (Europa).`
 
-    let textoTraduzido = document.getElementById("traduzir")
+    let textoPortugues = document.getElementById("traduzir")
+    let texto = document.getElementById("texto")
 
-    function mudarTexto() {
-        textoTraduzido.innerHTML = traducao
+    function tesxtoPortugues() {
+        textoPortugues.innerHTML = portugues
+        texto.style.display = "none"
     }
-    
+
+
+   const ingles = `Thanksgiving Day is celebrated every year on the fourth Thursday of November, serving as a reminder of the value of gratitude. It is a day of giving thanks, during which families gather and reflect—with gratitude to God—on the good things that happened throughout the year.
+
+Origin:
+In the 16th century, in Plymouth Colony, Massachusetts, a region called New England, the village inhabitants held a feast to celebrate the harvest of that year’s crops. This was because they had endured very harsh winters.
+
+Starting in 1620, after many hardships, the founding pilgrims of the village began to celebrate the good harvest. In 1621, to give thanks again for the harvest, the village governor organized the "Autumn Festival" between the English settlers and Native Americans. This event included a variety of dishes such as corn, fish, ducks, and turkeys.
+
+Since then, Thanksgiving Day has become a tradition in the United States and Canada.
+
+Other countries that celebrate Thanksgiving are:
+Grenada (Caribbean), Liberia (Africa), Norfolk Island (Australia), and the Netherlands (Europe).`
+
+    let textoIngles = document.getElementById("traduzir")
+    let text = document.getElementById("texto")
+
+    function tesxtoIngles() {
+        textoIngles.innerHTML = ingles
+        text.style.display = "none"
+    }
+
+
+
+
+
+
+
+
+
+
+   const portuguese = ` Tradicionalmente, a data do dia de Ação de Graças
+    é marcada por um jantar com peru assado, acompanhado de outros pratos
+     típicos como purê de batatas, molho de cranberry e torta de abóbora, recheios e legumes.`
+
+    let textoPortuguess = document.getElementById("traducao")
+    let inicio = document.getElementById("textoo")
+
+    function portugueseText() {
+        textoPortuguess.innerHTML = portuguese
+        inicio.style.display = "none"
+    }
+
+
+   const english = `Traditionally, Thanksgiving Day is marked by a 
+   dinner featuring roasted turkey, accompanied by other traditional
+    dishes such as mashed potatoes, cranberry sauce, pumpkin pie, stuffing, and vegetables.`
+
+    let textoIngless = document.getElementById("traducao")
+    let principal = document.getElementById("text")
+
+    function englishText() {
+        textoIngless.innerHTML = english
+        principal.style.display = "none"
+    }
+

@@ -6,6 +6,12 @@
     p{
         font-family: Concert One;
     }
+
+    a, h5, span, p{
+        text-decoration: none;
+    }
+
+   
 }
 
 /* Estilos para o corpo da página */
@@ -178,9 +184,43 @@ cursor: pointer;
 
 }
 
+/* ----------------------------------------------------- SITE SOBRE GRATIDAO ------------------------------------------------- */
+.gratidao{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.blocoGratidao{
+    width: 70%;
+    height: 30%;
 
+    border-radius: 5px;
+    border: 2px solid #6a2e04;
 
+    background-color: #9f795e;
+    color: aliceblue;
 
+    padding: 2%;
+}
+
+.imagens{
+    display: flex;
+justify-content: space-around;   
+ img{
+
+        width: 20%;
+        height: 30%;
+
+        padding-top: 5%;
+    }
+}
+
+.imgSecundaria{
+    img{
+        width: 60%;
+        height: 40%;
+    }
+}
 
 
 
