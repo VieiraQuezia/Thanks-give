@@ -3,8 +3,8 @@
 const userModel = require("..//model/userModel"); // Importa o model para interagir com o banco
 
 // Função para lidar com a requisição de listagem de usuários
-exports.getMensagem = (req, res) => {
-  userModel.getAllMensagens((err, mensagem) => {
+exports.getMensagemAleatoria = (req, res) => {
+  userModel.getMensagensAleatorias((err, mensagem) => {
     if (err) {
       res.status(500).send("Erro ao buscar a mensagem"); // Retorna um erro 500 se algo deu errado
     } else {
@@ -24,20 +24,6 @@ exports.createMensagem = (req, res) => {
     }
   });
 };
-
-
-// Função para buscar um aluno pelo Nome
-exports.getMensagemByTema = (req, res) => {
-    const { tema } = req.params; // Extrai o RM dos parâmetros da URL
-  
-    userModel.getMensagemByTema(mensagem, (err, mensagem) => {
-      if (err) {
-        res.status(500).send("Erro ao buscar mensagem"); // Erro no servidor
-      } else {
-        res.json(mensagem); // Retorna os dados do aluno em formato JSON
-      }
-    });
-  };
 
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
