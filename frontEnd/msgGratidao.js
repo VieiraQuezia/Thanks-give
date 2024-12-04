@@ -64,6 +64,10 @@ async function buscarMensagem() {
   }
 }
 
+
+
+
+
 // Função assíncrona para adicionar uma nova mensagem via API
 async function addMensagem() {
   const mensagemInput = document.getElementById("mensagemGratidao"); // Obtém o valor do campo de mensagem
