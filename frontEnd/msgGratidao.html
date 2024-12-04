@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="msgGratidao.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,17 +55,37 @@
       distinctio itaque officiis!
 </p>
 
+<nav class="form-container">
+
+    <nav class="form-group">
+
+<button  onclick="buscarMensagem()"> gerar mensagem de gratidao</button>
+<nav class="blocoAleatorio">
+
+    <p id="blocoTextoAleatorio"></p>
+    <p id="temaDaMensagem"></p>
+
+</nav>
+
+<p id="erroMensagem" style="color: brown; display: none;"> erro na buscampor mensagem</p>
+    </nav>
+
+</nav>
+
 
 <nav class="form-container">
-    <h2>Adicionar Usuário</h2>
+    <h2>Adicionar uma Mensagem de gratidão</h2>
+
     <nav class="form-group">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" placeholder="Digite o nome do usuário" />
+      <input type="text" id="mensagemGratidao" placeholder="Digite uma mensagem" />
     </nav>
+
     <nav class="form-group">
-      <label for="age">Idade:</label>
-      <input type="number" id="age" placeholder="Digite a idade do usuário" />
+      <input type="text" id="temaMensagem" placeholder="Digite o tema da mensagem" />
     </nav>
+
+    <button class="add-user-btn" onclick="addMensagem()">Adicionar</button>
+
 
 </nav>
 </article>

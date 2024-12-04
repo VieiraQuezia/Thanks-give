@@ -225,17 +225,17 @@ justify-content: space-around;
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
+
+
 /* Contêiner geral */
 .form-container,
 .user-list {
   max-width: 500px;
   width: 100%;
+
   margin-top: 20px;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
 }
 
 /* Formulários */
@@ -252,11 +252,16 @@ justify-content: space-around;
 .form-group input {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+ 
   font-size: 14px;
 }
 
+
+.blocoAleatorio{
+
+    width: 30%;
+    height: 20%;
+}
 
 
 
