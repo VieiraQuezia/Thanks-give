@@ -28,16 +28,16 @@ exports.createMensagem = (req, res) => {
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////HISTÓRIAS MOTIVADORAS////////////////////////////////////////////////////////////////////
-  
-  // Função para buscar um aluno pelo Nome
-  exports.getHistoriaByPalavra = (req, res) => {
-      const { historia } = req.params; // Extrai o RM dos parâmetros da URL
+
+  // Função para buscar um história por palavra
+  exports.getHistoriasByPalavras = (req, res) => {
+      const { palavra } = req.params; // Extrai o ID dos parâmetros da URL
     
-      userModel.getMensagemByTema(mensagem, (err, historia) => {
+      userModel.getHistoriaByPalavra(palavra, (err, historia) => {
         if (err) {
           res.status(500).send("Erro ao buscar historia"); // Erro no servidor
         } else {
-          res.json(historia); // Retorna os dados do aluno em formato JSON
+          res.json(historia); // Retorna os dados da história em formato JSON
         }
       });
     };
