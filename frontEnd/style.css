@@ -179,53 +179,6 @@ article {
 }
 
 /* ----------------------------------------------------- SITE SOBRE GRATIDAO ------------------------------------------------- */
-<<<<<<< HEAD
-
-.gratidao{
-display: flex;
-justify-content: center;
-align-items: center;
-
-}
-
-
-.blocoGratidao{
-    width: 70%;
-    height: 30%;
-
-    border-radius: 5px;
-    border: 2px solid #6a2e04;
-
-    background-color: #9f795e;
-    color: aliceblue;
-
-    padding: 2%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.imagens{
-    display: flex;
-justify-content: space-around;   
- img{
-
-        width: 20%;
-        height: 30%;
-
-        padding-top: 5%;
-    }
-}
-
-
-.imgSecundaria{
-    img{
-        width: 60%;
-        height: 40%;
-    }
-=======
 .gratidao {
   display: flex;
   justify-content: center;
@@ -260,7 +213,6 @@ justify-content: space-around;
     width: 60%;
     height: 40%;
   }
->>>>>>> 73d257a4d856012e139aa365018a6e03d9da8015
 }
 
 /* ----------------------------------------------------------- */
@@ -295,55 +247,6 @@ justify-content: space-around;
   font-size: 14px;
 }
 
-<<<<<<< HEAD
-
-.blocoAleatorio{
-display: flex;
-justify-content: center;
-align-items: center;
-
-    width: auto;
-    height: 20%;
-
-}
-
-article button{
-    background-color: aliceblue;
-    color: black;
-
-    padding: 2%;
-    border-radius: 10px;
-border: 2px solid black;
-}
-
-article button :hover{
-
-background-color: black;
-color: white;
-}
-
-
-
-
-.footer {
-    width: 100%;
-
-    color: aliceblue;
-    background-color: #8a481a;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    
-}
-
-
-
-
-
-=======
 .blocoAleatorio {
   width: 30%;
   height: 20%;
@@ -385,7 +288,6 @@ color: white;
     margin-bottom: 2%;
   }
 }
->>>>>>> 73d257a4d856012e139aa365018a6e03d9da8015
 
 /* Definição da animação para o fundo do texto */
 @keyframes aitf {
