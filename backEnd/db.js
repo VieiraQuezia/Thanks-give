@@ -8,12 +8,12 @@ const config = {
   authentication: {
     type: "default", // Tipo de autenticação (no caso, autenticando com nome de usuário e senha)
     options: {
-      userName: "testesql", // Nome do usuário do banco de dados
-      password: "12345", // Senha do banco de dados
+      userName: "teste", // Nome do usuário do banco de dados
+      password: "1234", // Senha do banco de dados
     },
   },
   options: {
-    database: "thanksgiving_day", // Nome do banco de dados
+    database: "NodeJS", // Nome do banco de dados
     encrypt: false, // Desativar criptografia (pode mudar se necessário)
     port: 1433, // Porta padrão do SQL Server
     trustServerCertificate: true, // Necessário para evitar erro de SSL em ambiente local
