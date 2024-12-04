@@ -28,17 +28,6 @@ exports.createMensagem = (req, res) => {
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////HISTÓRIAS MOTIVADORAS////////////////////////////////////////////////////////////////////
-
-  // Função para lidar com a requisição de listagem de usuários
-exports.getHistoria = (req, res) => {
-    userModel.getAllHistorias((err, historia) => {
-      if (err) {
-        res.status(500).send("Erro ao buscar a historia"); // Retorna um erro 500 se algo deu errado
-      } else {
-        res.json(historia); // Retorna os usuários em formato JSON
-      }
-    });
-  };
   
   // Função para buscar um aluno pelo Nome
   exports.getHistoriaByPalavra = (req, res) => {
