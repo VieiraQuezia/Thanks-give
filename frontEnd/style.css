@@ -256,6 +256,7 @@ justify-content: space-around;
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 
 .blocoAleatorio{
 
@@ -266,6 +267,20 @@ justify-content: space-around;
 
 
 
+=======
+.footer {
+    width: 100%;
+    background-color: #8a481a;
+    align-items: center;
+    p {margin-left: 5%;}
+    ul {margin-left: 5%;}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    img {width: 15%; height: 10%;margin-top: 2%; margin-bottom: 2%;}
+    
+}
+>>>>>>> 0a3782c16b38e8ef66b2d75ae01dcba0fc341a6f
 
 
 

@@ -14,6 +14,6 @@ router.get("/mensagem", userController.getMensagemAleatoria);
 //////////////////////////////////////////////////HISTÓRIAS MOTIVADORAS////////////////////////////////////////////////////////////////////
 
 // Rota GET para buscar um usuário pelo ID
-router.get("/historia/:historia", userController.getHistoriaByPalavra);
+router.get("/historia/:palavra", userController.getHistoriasByPalavras);
 
 module.exports = router;
