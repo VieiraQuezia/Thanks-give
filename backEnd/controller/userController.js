@@ -16,7 +16,7 @@ exports.getMensagemAleatoria = (req, res) => {
 // Função para lidar com a requisição de criação de usuário
 exports.createMensagem = (req, res) => {
   const data = req.body; // Extrai o nome do corpo da requisição
-  userModel.createMensagem(data, (err) => {
+  userModel.createMensagens(data, (err) => {
     if (err) {
       res.status(500).send("Erro ao criar mensagem"); // Retorna um erro 500 se algo deu errado
     } else {
