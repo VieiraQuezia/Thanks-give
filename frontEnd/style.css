@@ -3,9 +3,9 @@
   margin: 0%; /* Remove a margem padrão */
   padding: 0%; /* Remove o preenchimento padrão */
 
-  p {
+  
     font-family: Concert One;
-  }
+  
 
   a,
   h5,
@@ -232,10 +232,20 @@ justify-content: space-around;
 /* ----------------------------------------------------------- */
 
 /* Contêiner geral */
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2{
+    padding-bottom: 2%;
+  }
+}
+
+
 .form-container,
 .user-list {
-  max-width: 500px;
-  width: 100%;
 
   margin-top: 20px;
   padding: 15px;
@@ -270,26 +280,42 @@ align-items: center;
 
 }
 
+.barraMensagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+background-color: whitesmoke;
+color: #6a2e04;
+border: 2px  solid;
+border-radius: 10px ;
+
+
+  width: 60%;
+
+  padding-bottom: 2%;
+  padding: 2%;
+}
+
 article button{
-    background-color: aliceblue;
-    color: black;
+    background-color:#6a2e04;
+    color: whitesmoke;
 
     padding: 2%;
     border-radius: 10px;
-border: 2px solid black;
+border: 2px solid ;
 }
 
-article button :hover{
+ button:hover{
 
-background-color: black;
-color: white;
+background-color: whitesmoke;
+color:#6a2e04;
 }
 
 
 
 
 .footer {
-    width: 100%;
 
     padding: 3%;
 
