@@ -81,7 +81,7 @@ Grenada (Caribbean), Liberia (Africa), Norfolk Island (Australia), and the Nethe
      típicos como purê de batatas, molho de cranberry e torta de abóbora, recheios e legumes.`
 
     let textoPortuguess = document.getElementById("traducao")
-    let inicio = document.getElementById("textoo")
+    let inicio = document.getElementById("text")
 
     function portugueseText() {
         textoPortuguess.innerHTML = portuguese
