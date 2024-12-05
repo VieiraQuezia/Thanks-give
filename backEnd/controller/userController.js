@@ -16,7 +16,7 @@ exports.getMensagemAleatoria = (req, res) => {
 // Função para lidar com a requisição de criação de usuário
 exports.createMensagem = (req, res) => {
   const data = req.body; // Extrai o nome do corpo da requisição
-  userModel.createMensagem(data, (err) => {
+  userModel.createMensagens(data, (err) => {
     if (err) {
       res.status(500).send("Erro ao criar mensagem"); // Retorna um erro 500 se algo deu errado
     } else {
@@ -27,28 +27,17 @@ exports.createMensagem = (req, res) => {
 
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////HISTÓRIAS MOTIVADORAS////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////HISTÓRIAS MOTIVADORAS//////////////////////////////////////////////////////////////////
 
-  // Função para lidar com a requisição de listagem de usuários
-exports.getHistoria = (req, res) => {
-    userModel.getAllHistorias((err, historia) => {
-      if (err) {
-        res.status(500).send("Erro ao buscar a historia"); // Retorna um erro 500 se algo deu errado
-      } else {
-        res.json(historia); // Retorna os usuários em formato JSON
-      }
-    });
-  };
-  
-  // Função para buscar um aluno pelo Nome
-  exports.getHistoriaByPalavra = (req, res) => {
-      const { historia } = req.params; // Extrai o RM dos parâmetros da URL
+  // Função para buscar um história por palavra
+  exports.getHistoriasByPalavras = (req, res) => {
+      const { palavra } = req.params; // Extrai o ID dos parâmetros da URL
     
-      userModel.getMensagemByTema(mensagem, (err, historia) => {
+      userModel.getHistoriaByPalavra(palavra, (err, historia) => {
         if (err) {
           res.status(500).send("Erro ao buscar historia"); // Erro no servidor
         } else {
-          res.json(historia); // Retorna os dados do aluno em formato JSON
+          res.json(historia); // Retorna os dados da história em formato JSON
         }
       });
     };

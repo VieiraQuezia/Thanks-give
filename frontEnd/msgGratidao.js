@@ -1,254 +1,125 @@
 // ------------------------ BOTÃO DE MENU -----------
 
 document.addEventListener('DOMContentLoaded', function() {
+  let menu = document.getElementById('menu-opcoes');
+  let icon = document.querySelector('.bx-menu');
+
+  icon.addEventListener('click', function() {
+      if (menu.style.display === 'none' || menu.style.display === '') {
+          menu.style.display = 'block';
+      } else {
+          menu.style.display = 'none';
+      }
+  });
+
+  // Fecha o menu se clicar fora dele
+  document.addEventListener('click', function(event) {
+      if (!icon.contains(event.target) && !menu.contains(event.target)) {
+          menu.style.display = 'none';
+      }
+  });
+});
+
+
+// Importando a função 'error' do módulo 'console' (não é utilizado no código atual)
+const { error } = require("console");
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtendo o menu e o ícone do menu pelo seu ID e classe, respectivamente
     let menu = document.getElementById('menu-opcoes');
     let icon = document.querySelector('.bx-menu');
 
+    // Adicionando um ouvinte de evento para o ícone do menu
     icon.addEventListener('click', function() {
+        // Alterna a exibição do menu ao clicar no ícone
         if (menu.style.display === 'none' || menu.style.display === '') {
-            menu.style.display = 'block';
+            menu.style.display = 'block';  // Mostra o menu
         } else {
-            menu.style.display = 'none';
+            menu.style.display = 'none';   // Esconde o menu
         }
     });
 
-    // Fecha o menu se clicar fora dele
+    // Adicionando um ouvinte de evento para fechar o menu caso o clique seja fora dele
     document.addEventListener('click', function(event) {
+        // Verifica se o clique foi fora do ícone e do menu, e se sim, esconde o menu
         if (!icon.contains(event.target) && !menu.contains(event.target)) {
             menu.style.display = 'none';
         }
     });
 });
 
+// --------------------------------------------------------------------------
+// ------------------------ SEÇÃO DE MENSAGENS ----------------------------
+// --------------------------------------------------------------------------
 
+// URL da API para buscar e adicionar mensagens
+const apiUrl = "http://localhost:3000/mensagem"; 
 
-
-
-
-const apiUrl = "http://localhost:3000/users"; // URL da API
-
-// Exibe o spinner enquanto carrega os dados
+// Função para mostrar um "spinner" enquanto os dados são carregados
 function showLoading(target) {
-  target.innerHTML = `<div class="spinner show"></div>`;
-}
-
-// Função para buscar todos os usuários e exibir na tela
-async function fetchUsers() {
-  const userList = document.getElementById("userList");
-  showLoading(userList); // Exibe o spinner
-
-  const response = await fetch(apiUrl);
-  const users = await response.json();
-
-  userList.innerHTML = "<h2>Lista de Usuários</h2>";
-
-  users.forEach((user) => {
-    const userItem = document.createElement("div");
-    userItem.className = "user-item";
-    userItem.innerHTML = `
-      <span>${user.name}</span>
-      <div>
-        <button class="update-user-btn" onclick="updateUser(${user.id})">Atualizar</button>
-        <button class="delete-user-btn" onclick="deleteUser(${user.id})">Deletar</button>
-      </div>
-    `;
-    userList.appendChild(userItem);
-  });
+  target.innerHTML = `<div class="spinner show"></div>`; // Exibe um "spinner" de carregamento
 }
 
 
-// Função para adicionar um novo usuário
-async function addUser() {
-  const nameInput = document.getElementById("name");
-  const ageInput = document.getElementById("age");
-  const emailInput = document.getElementById("email");
-  const contactInput = document.getElementById("contact");
+// Função assíncrona para buscar uma mensagem da API
+async function buscarMensagem() {
+  try {
+    const response = await fetch('http://localhost:3000/mensagem'); // Fazendo a requisição à API
+    if (!response.ok) {
+      throw new Error("Mensagem não encontrada"); // Lança um erro se a resposta não for bem-sucedida
+    }
+    const data = await response.json();  // Converte a resposta em JSON
+    console.log("Dados", data);  // Exibe os dados no console
 
-  const name = nameInput.value.trim();
-  const age = parseInt(ageInput.value.trim());
-  const email = emailInput.value.trim();
-  const contact = contactInput.value.trim();
+    // Exibe a mensagem e o tema no HTML
+    document.getElementById("blocoTextoAleatorio").innerHTML = data[0].Mensagem;
+    document.getElementById("temaDaMensagem").innerHTML = `Tema: ${data[0].Tema}`;
+    document.querySelector(".blocoAleatorio").style.display = "block";  // Mostra a área com o texto aleatório
+    document.getElementById("erroMensagem").style.display = "none";  // Esconde a área de erro
 
-  // Validação dos campos
-  if (!name || isNaN(age) || age <= 0 || !email || !contact) {
-    alert("Por favor, preencha todos os campos corretamente.");
-    return;
-  }
-
-  if (!validateEmail(email)) {
-    alert("Por favor, insira um email válido.");
-    return;
-  }
-
-  if (!validateContact(contact)) {
-    alert("Por favor, insira um contato válido (exemplo: 99999-9999).");
-    return;
-  }
-
-  const response = await fetch(apiUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, age, email, contact }),
-  });
-
-  if (response.ok) {
-    alert("Usuário adicionado com sucesso!");
-    // Limpa os campos do formulário
-    nameInput.value = "";
-    ageInput.value = "";
-    emailInput.value = "";
-    contactInput.value = "";
-    fetchUsers(); // Atualiza a lista de usuários
-  } else {
-    const error = await response.json();
-    alert(`Erro ao adicionar usuário: ${error.message}`);
-  }
-}
-
-// Função para validar email
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-}
-
-// Função para validar contato (formato 99999-9999)
-function validateContact(contact) {
-  const regex = /^\d{5}-\d{4}$/;
-  return regex.test(contact);
-}
-
-
-// Função para atualizar os dados de um usuário
-async function updateUser(id) {
-  const newName = prompt("Digite o novo nome do usuário:");
-  const newAge = prompt("Digite a nova idade do usuário:");
-  const newEmail = prompt("Digite o novo email do usuário:");
-  const newContact = prompt("Digite o novo contato do usuário:");
-
-  if (!newName || isNaN(newAge) || newAge <= 0 || !newEmail || !newContact) {
-    alert("Por favor, insira valores válidos.");
-    return;
-  }
-
-  if (!validateEmail(newEmail)) {
-    alert("Por favor, insira um email válido.");
-    return;
-  }
-
-  if (!validateContact(newContact)) {
-    alert("Por favor, insira um contato válido (exemplo: 99999-9999).");
-    return;
-  }
-
-  const response = await fetch(`${apiUrl}/${id}`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: newName,
-      age: parseInt(newAge),
-      email: newEmail,
-      contact: newContact,
-    }),
-  });
-
-  if (response.ok) {
-    alert("Usuário atualizado com sucesso!");
-    fetchUsers(); // Atualiza a lista de usuários
-  } else {
-    alert("Erro ao atualizar usuário.");
+  } catch (error) {
+    // Se ocorrer um erro, exibe a mensagem de erro
+    document.getElementById("erroMensagem").innerHTML = error.message;
+    document.getElementById("erroMensagem").style.display = "block";
+    document.querySelector(".blocoAleatorio").style.display = "none";  // Esconde o bloco de mensagem aleatória em caso de erro
   }
 }
 
 
-// Função para deletar um usuário
-async function deleteUser(id) {
-  if (!confirm("Tem certeza que deseja deletar este usuário? Essa ação não pode ser desfeita.")) return;
-
-  const response = await fetch(`${apiUrl}/${id}`, {
-    method: "DELETE",
-  });
-
-  if (response.ok) {
-    alert("Usuário deletado com sucesso!");
-    fetchUsers(); // Atualiza a lista de usuários
-  } else {
-    alert("Erro ao deletar usuário.");
-  }
-}
 
 
-// Função para buscar todos os usuários e exibir na tela
-async function fetchUsers() {
-  const userList = document.getElementById("userList");
-  showLoading(userList); // Exibe o spinner
 
-  const response = await fetch(apiUrl);
-  if (!response.ok) {
-    alert("Erro ao buscar usuários.");
+// Função assíncrona para adicionar uma nova mensagem via API
+async function addMensagem() {
+  const mensagemInput = document.getElementById("mensagemGratidao"); // Obtém o valor do campo de mensagem
+  const temaInput = document.getElementById("temaMensagem");  // Obtém o valor do campo de tema
+  
+  const Mensagem = mensagemInput.value.trim();  // Remove espaços extras
+  const Tema = temaInput.value.trim();  // Remove espaços extras
+
+  // Valida os campos para garantir que estão preenchidos
+  if (!Mensagem || !Tema) {
+    alert("Por favor, preencha todos os campos.");  // Exibe um alerta se algum campo estiver vazio
     return;
   }
-
-  const users = await response.json();
-
-  userList.innerHTML = "<h2>Lista de Usuários</h2>";
-
-  users.forEach((user) => {
-    const userItem = document.createElement("div");
-    userItem.className = "user-item";
-    userItem.innerHTML = `
-      <div>
-        <p><strong>Nome:</strong> ${user.name}</p>
-        <p><strong>Idade:</strong> ${user.age}</p>
-        <p><strong>Email:</strong> ${user.email}</p>
-        <p><strong>Contato:</strong> ${user.contact}</p>
-      </div>
-      <div>
-        <button class="update-user-btn" onclick="updateUser(${user.id})">Atualizar</button>
-        <button class="delete-user-btn" onclick="deleteUser(${user.id})">Deletar</button>
-      </div>
-    `;
-    userList.appendChild(userItem);
-  });
-}
-
-// Função para buscar um usuário por ID
-async function fetchUserById() {
-  const userIdInput = document.getElementById("userId");
-  const userId = userIdInput.value.trim();
-  const userDetails = document.getElementById("userDetails");
-
-  if (!userId || isNaN(userId) || userId <= 0) {
-    alert("Por favor, insira um ID válido.");
-    return;
-  }
-
-  showLoading(userDetails);
 
   try {
-    const response = await fetch(`${apiUrl}/${userId}`);
-    if (response.status === 404) {
-      userDetails.innerHTML = `<p>Usuário não encontrado.</p>`;
-    } else if (!response.ok) {
-      const error = await response.json();
-      alert(`Erro: ${error.error || "Erro desconhecido ao buscar usuário"}`);
+    // Fazendo a requisição POST para adicionar a mensagem na API
+    const response = await fetch("http://localhost:3000/mensagem", {
+      method: "POST",  // Método POST para adicionar dados
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ Mensagem, Tema }), // Corpo da requisição com os dados em formato JSON
+    });
+
+    if (response.ok) {
+      alert("Mensagem adicionada com sucesso!");  // Exibe sucesso
+      mensagemInput.value = "";  // Limpa os campos após sucesso
+      temaInput.value = "";
     } else {
-      const user = await response.json();
-      userDetails.innerHTML = `
-        <h2>Detalhes do Usuário</h2>
-        <p><strong>ID:</strong> ${user.id}</p>
-        <p><strong>Nome:</strong> ${user.name}</p>
-        <p><strong>Idade:</strong> ${user.age}</p>
-        <p><strong>Email:</strong> ${user.email}</p>
-        <p><strong>Contato:</strong> ${user.contact}</p>
-      `;
+      const error = await response.json();  // Se falhar, captura o erro retornado pela API
+      alert(`Erro ao adicionar mensagem: ${error.Message}`);  // Exibe o erro
     }
   } catch (error) {
-    alert("Erro ao buscar usuário. Verifique sua conexão.");
-    userDetails.innerHTML = "";
+    alert(error.Message);  // Exibe erro caso algo dê errado com a requisição
   }
 }
-
-
-
-// Carrega a lista de usuários ao carregar a página
-fetchUsers();

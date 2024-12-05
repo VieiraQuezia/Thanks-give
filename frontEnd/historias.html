@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="style.css">
-    <script src="msgGratidao.js" defer></script>
+    <script src="historia.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,11 @@
     </h5>
 
 
-    <i class='bx bx-menu '></i>
+    <i class='bx bx-menu'></i>
         <nav id="menu-opcoes" class="menu-opcoes">
             <ul>
                 <li><a href="acaoDeGracas.html">Ação de Graças</a></li>
-                <li><a href="historias.html">Historias inspiradoras</a></li>
+                <li><a href="msgGratidao.html"></a></li>
                 <li><a href="grupo.html">Grupo</a></li>
             </ul>
         </nav>
@@ -49,62 +49,40 @@
 <article class="gratidao">
     <nav class="blocoGratidao">
 <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-     obcaecati magnam dolor nostrum tenetur laboriosam, esse beatae 
-     ipsam cum, eum quis praesentium facere quas veritatis amet ut
-      distinctio itaque officiis!
+    Nessa página, você pode buscar histórias inspiradoras escrevendo uma palavra. Clicando no botão abaixo, a página vai te mostrar a/as mensagem/ns e sua/s imagem/ns.
 </p>
 
 <nav class="form-container">
 
     <nav class="form-group">
-
+        <input type="text" id="historiaPalavra" placeholder="Digite uma palavra" />
+<button  onclick="buscarMensagem()"> Procurar história inspiradora</button>
 <nav class="blocoAleatorio">
 
-<nav class="barraMensagem">
     <p id="blocoTextoAleatorio"></p>
-</nav>
-
-    <p id="temaDaMensagem" style="display: flex; justify-content: center;"></p>
+    <p id="imagemURL"></p>
     
 </nav>
 
-
-<p id="erroMensagem" style="color: brown; display: none;"> erro na buscampor mensagem</p>
-
-    </nav>
-
-    <button  onclick="buscarMensagem()"> GERAR MENSAGEM DE GRATIDÃO</button>
-
+<p id="erroMensagem" style="color: brown; display: none;"> Erro ao buscar história</p>
 
 </nav>
 
 
-<nav class="form-container">
-
-    <h2> ADICIONAR UMA MENSAGEM DE GRATIDÃO </h2>
-
-    <nav class="form-group">
-      <input type="text" id="mensagemGratidao" placeholder="Digite uma mensagem" />
-    </nav>
-
-    <nav class = "form-group">
-      <input type="text" id="temaMensagem" placeholder="Digite o tema da mensagem" />
-    </nav>
-
-    <button class="add-user-btn" onclick="addMensagem()">Adicionar</button>
 
 </nav>
+
 
 </article>
 
 <footer class="footer">
-    <p>Grupo 6
-        <br>
-        Projeto Integrado (Thanksgiving Day)
-        <br>
-        SENAI
-        Vinhedo</p>
+    <p>Grupo 6 - 2° ano EM</p>
+    <p>Projeto integrado (Thanks Given Day) </p>
+<br>
+    <p>SENAI</p>
+    <p>Vinhedo</p>
+    <br>
+   
 </footer>
 
 

@@ -1,195 +1,193 @@
 /* Resetando margens e preenchimentos de todos os elementos */
 * {
-    margin: 0%;    /* Remove a margem padrão */
-    padding: 0%;   /* Remove o preenchimento padrão */
+  margin: 0%; /* Remove a margem padrão */
+  padding: 0%; /* Remove o preenchimento padrão */
 
-    p{
-        font-family: Concert One;
-    }
+  
+    font-family: Concert One;
+  
 
-    a, h5, span, p{
-        text-decoration: none;
-    }
-
-   
+  a,
+  h5,
+  span,
+  p {
+    text-decoration: none;
+  }
 }
 
 /* Estilos para o corpo da página */
 body {
-    background-color: #c47241; /* Cor de fundo da página */
-    font: 400 1em/1.5 "Neuton"; /* Define a fonte do corpo como "Neuton", com peso normal e tamanho 1em, com altura de linha de 1.5 */
+  background-color: #c47241; /* Cor de fundo da página */
+  font: 400 1em/1.5 "Neuton"; /* Define a fonte do corpo como "Neuton", com peso normal e tamanho 1em, com altura de linha de 1.5 */
 }
-
 
 /*------------------------------------------------- Estilos para o header----------------------------------------------------- */
 header {
-   
-    display: flex; /* Usa flexbox para organizar os itens dentro do header */
-   justify-content: space-between;
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    padding: 5%; /* Adiciona espaçamento interno de 5% em todos os lados */
+  display: flex; /* Usa flexbox para organizar os itens dentro do header */
+  justify-content: space-between;
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  padding: 5%; /* Adiciona espaçamento interno de 5% em todos os lados */
 }
 
 /* Estilos para as imagens dentro do header */
 header img {
-    padding-left: 2%; /* Adiciona espaçamento à esquerda da imagem */
-    width: 15%; /* Define a largura da imagem para 15% do tamanho do elemento pai */
-    height: 15%; /* Define a altura da imagem para 15% do tamanho do elemento pai */
-    border-radius: 50%; /* Torna a imagem circular */
+  padding-left: 2%; /* Adiciona espaçamento à esquerda da imagem */
+  width: 15%; /* Define a largura da imagem para 15% do tamanho do elemento pai */
+  height: 15%; /* Define a altura da imagem para 15% do tamanho do elemento pai */
+  border-radius: 50%; /* Torna a imagem circular */
 }
-
 
 /* Estilos para os parágrafos */
 h5 {
-    text-align: center; /* Alinha o texto centralizado */
-    text-transform: uppercase; /* Transforma o texto para letras maiúsculas */
-    letter-spacing: .5em; /* Define o espaçamento entre as letras */
-    display: inline-block; /* Faz com que o parágrafo se comporte como um bloco inline */
-    border: 4px double rgba(255, 255, 255, .25); /* Adiciona uma borda dupla ao redor do parágrafo */
-    border-width: 4px 0; /* Define a largura da borda apenas nas laterais superior e inferior */
-    padding: 1.5em 0em; /* Define o preenchimento nas laterais superior e inferior */
-    position: absolute; /* Define a posição do parágrafo como absoluta */
-    top: 18%; /* Define a posição vertical a 18% da altura do elemento pai */
-    left: 50%; /* Define a posição horizontal a 50% da largura do elemento pai */
-    width: 40em; /* Define uma largura fixa de 40em */
-    margin: 0 0 0 -20em; /* Alinha o parágrafo horizontalmente no centro, deslocando-o para a esquerda em 20em */
+  text-align: center; /* Alinha o texto centralizado */
+  text-transform: uppercase; /* Transforma o texto para letras maiúsculas */
+  letter-spacing: 0.5em; /* Define o espaçamento entre as letras */
+  display: inline-block; /* Faz com que o parágrafo se comporte como um bloco inline */
+  border: 4px double rgba(255, 255, 255, 0.25); /* Adiciona uma borda dupla ao redor do parágrafo */
+  border-width: 4px 0; /* Define a largura da borda apenas nas laterais superior e inferior */
+  padding: 1.5em 0em; /* Define o preenchimento nas laterais superior e inferior */
+  position: absolute; /* Define a posição do parágrafo como absoluta */
+  top: 18%; /* Define a posição vertical a 18% da altura do elemento pai */
+  left: 50%; /* Define a posição horizontal a 50% da largura do elemento pai */
+  width: 40em; /* Define uma largura fixa de 40em */
+  margin: 0 0 0 -20em; /* Alinha o parágrafo horizontalmente no centro, deslocando-o para a esquerda em 20em */
 }
 
 /* Estilos para o span dentro do parágrafo */
 h5 span {
-    font: 700 4em/1 "Oswald", sans-serif; /* Define a fonte do texto como "Oswald", com peso 700 e tamanho 4em */
-    padding: .25em 0 .325em; /* Define o preenchimento superior e inferior */
-    display: block; /* Torna o span um bloco de nível de bloco */
-    margin: 0 auto; /* Centraliza o span horizontalmente */
-    
-    /* Clipagem do fundo da imagem dentro do texto */
-    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y; /* Define a imagem de fundo para o texto */
-    background-clip: text; /* Faz o fundo ser recortado dentro do texto  */
-    
-    /* Animação do fundo */
-    -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
-    animation: aitf 80s linear infinite; /* Define a animação para o fundo do texto */
-    
-    /* Ativa aceleração de hardware para animações mais suaves */
-    transform: translate3d(0, 0, 0); /* Garante que a animação seja acelerada por hardware */
-    backface-visibility: hidden; /* Impede que o texto fique visível ao virar */
+  font: 700 4em/1 "Oswald", sans-serif; /* Define a fonte do texto como "Oswald", com peso 700 e tamanho 4em */
+  padding: 0.25em 0 0.325em; /* Define o preenchimento superior e inferior */
+  display: block; /* Torna o span um bloco de nível de bloco */
+  margin: 0 auto; /* Centraliza o span horizontalmente */
+
+  /* Clipagem do fundo da imagem dentro do texto */
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y; /* Define a imagem de fundo para o texto */
+  background-clip: text; /* Faz o fundo ser recortado dentro do texto  */
+
+  /* Animação do fundo */
+  -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
+  animation: aitf 80s linear infinite; /* Define a animação para o fundo do texto */
+
+  /* Ativa aceleração de hardware para animações mais suaves */
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* Garante que a animação seja acelerada por hardware */
+  backface-visibility: hidden; /* Impede que o texto fique visível ao virar */
 }
 
 /* ---------- MENU PARA AS ABAS */
 .bx-menu {
-    margin-top: 5%;
-        font-size: 3.5vw; 
-        color: #6a2e04;
-        margin-right: 5%;
-        cursor: pointer;
-        transition: color 0.5s ease;
-    }
-    
-    .bx-menu:hover {
-        color: rgb(255, 255, 255);
-    }
-    
-    .menu-opcoes {
-        display: none;
-        position: absolute; /* Posicionado abaixo do ícone */
-        top: 18%; /* Ajuste para ficar logo abaixo do ícone */
-        right: 6%; /* Alinhado com a margem direita do ícone */
-        box-shadow: 2px 5px 10px rgb(0, 0, 0);
-        background-color: rgba(22, 22, 22, 0.945);
-        color: rgb(196, 196, 196);
-        padding: 10px;
-        width: 20%;
-        z-index: 10;
-        
-    }
-    
-    
-    .menu-opcoes ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .menu-opcoes ul li {
-        padding: 10px;
-        cursor: pointer;
-    }
-    
-    .menu-opcoes a {
-        display: block; /* Faz com que o link ocupe todo o bloco */
-        text-decoration: none; /* Remove o sublinhado do link */
-        color: inherit; /* Faz o texto herdar a cor do pai */
-        height: 100%; /* Garante que o link preencha a altura do bloco */
-        padding: 2%;
-    
-    }
-    
-    .menu-opcoes a:hover{
-        color: rgb(255, 255, 255);
-    }
+  margin-top: 5%;
+  font-size: 3.5vw;
+  color: #6a2e04;
+  margin-right: 5%;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.bx-menu:hover {
+  color: rgb(255, 255, 255);
+}
+
+.menu-opcoes {
+  display: none;
+  position: absolute; /* Posicionado abaixo do ícone */
+  top: 18%; /* Ajuste para ficar logo abaixo do ícone */
+  right: 6%; /* Alinhado com a margem direita do ícone */
+  box-shadow: 2px 5px 10px rgb(0, 0, 0);
+  background-color: rgba(22, 22, 22, 0.945);
+  color: rgb(196, 196, 196);
+  padding: 10px;
+  width: 20%;
+  z-index: 10;
+}
+
+.menu-opcoes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-opcoes ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-opcoes a {
+  display: block; /* Faz com que o link ocupe todo o bloco */
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Faz o texto herdar a cor do pai */
+  height: 100%; /* Garante que o link preencha a altura do bloco */
+  padding: 2%;
+}
+
+.menu-opcoes a:hover {
+  color: rgb(255, 255, 255);
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------- */
 
 /* Estilo para o efeito parallax */
 .parallax {
-    background-image: url("img/paralax.jpg"); /* Define a imagem de fundo */
+  background-image: url("img/paralax.jpg"); /* Define a imagem de fundo */
 
-    min-height: 500px; /* Define uma altura mínima de 500px para o efeito parallax */
+  min-height: 500px; /* Define uma altura mínima de 500px para o efeito parallax */
 
-    background-attachment: fixed; /* Faz com que a imagem de fundo permaneça fixa enquanto o conteúdo rola */
-    background-position: center; /* Alinha a imagem de fundo ao centro */
-    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
-    background-size: cover; /* Faz com que a imagem de fundo cubra completamente o elemento */
+  background-attachment: fixed; /* Faz com que a imagem de fundo permaneça fixa enquanto o conteúdo rola */
+  background-position: center; /* Alinha a imagem de fundo ao centro */
+  background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+  background-size: cover; /* Faz com que a imagem de fundo cubra completamente o elemento */
 
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
-
-
-
-article{
-    display: flex;
-    justify-content: space-between;
-    padding: 5%;
+article {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
 }
 
-.bloco{
+.bloco {
+  width: 30%;
+  height: 30%;
 
-    width: 30%;
-    height: 30%;
+  border-radius: 5px;
+  border: 2px solid #6a2e04;
 
-    border-radius: 5px;
-    border: 2px solid #6a2e04;
+  background-color: #9f795e;
+  color: aliceblue;
 
-    background-color: #9f795e;
-    color: aliceblue;
-
-    padding: 2%;
+  padding: 2%;
 }
 
-.bloco button{
-background-color: #6a2e04;
+.bloco button {
+  background-color: #6a2e04;
 
-color: #faca95;
-font-family:Concert One ;
-font-size: 1vw;
+  color: #faca95;
+  font-family: Concert One;
+  font-size: 1vw;
 
-border: 2px solid #9f795e;
+  border: 2px solid #9f795e;
 
-padding: 2%;
+  padding: 2%;
 
-width: 30%;
+  width: 30%;
 
-cursor: pointer;
-
+  cursor: pointer;
 }
 
 /* ----------------------------------------------------- SITE SOBRE GRATIDAO ------------------------------------------------- */
+
 .gratidao{
 display: flex;
 justify-content: center;
 align-items: center;
+
 }
+
+
 .blocoGratidao{
     width: 70%;
     height: 30%;
@@ -201,7 +199,13 @@ align-items: center;
     color: aliceblue;
 
     padding: 2%;
+
+    /* display: flex;
+    flex-direction: row; */
+    justify-content: center;
+    align-items: center;
 }
+
 
 .imagens{
     display: flex;
@@ -215,6 +219,7 @@ justify-content: space-around;
     }
 }
 
+
 .imgSecundaria{
     img{
         width: 60%;
@@ -222,10 +227,108 @@ justify-content: space-around;
     }
 }
 
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+/* Contêiner geral */
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2{
+    padding-bottom: 2%;
+  }
+}
+
+
+.form-container,
+.user-list {
+
+  margin-top: 20px;
+  padding: 15px;
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+
+  font-size: 14px;
+}
+
+
+.blocoAleatorio{
+display: flex;
+justify-content: center;
+align-items: center;
+
+    width: auto;
+    height: 20%;
+
+}
+
+.barraMensagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+background-color: whitesmoke;
+color: #6a2e04;
+border: 2px  solid;
+border-radius: 10px ;
+
+
+  width: 60%;
+
+  padding-bottom: 2%;
+  padding: 2%;
+}
+
+article button{
+    background-color:#6a2e04;
+    color: whitesmoke;
+
+    padding: 2%;
+    border-radius: 10px;
+border: 2px solid ;
+}
+
+ button:hover{
+
+background-color: whitesmoke;
+color:#6a2e04;
+}
 
 
 
 
+.footer {
+
+    padding: 3%;
+
+    color: aliceblue;
+    background-color: #8a481a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
 
 
 
@@ -234,6 +337,10 @@ justify-content: space-around;
 
 /* Definição da animação para o fundo do texto */
 @keyframes aitf {
-    0% { background-position: 0% 50%; } /* No início da animação, a posição do fundo está no início */
-    100% { background-position: 100% 50%; } /* No final da animação, a posição do fundo está no fim */
+  0% {
+    background-position: 0% 50%;
+  } /* No início da animação, a posição do fundo está no início */
+  100% {
+    background-position: 100% 50%;
+  } /* No final da animação, a posição do fundo está no fim */
 }
