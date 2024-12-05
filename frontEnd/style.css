@@ -297,6 +297,27 @@ border-radius: 10px ;
   padding: 2%;
 }
 
+.blocoGrupo {
+  width: 70%;
+  height: 30%;
+
+  border-radius: 5px;
+  border: 2px solid #6a2e04;
+
+  background-color: #9f795e;
+  color: aliceblue;
+
+  padding: 2%;
+  padding-left: 3%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+}
+
 article button{
     background-color:#6a2e04;
     color: whitesmoke;
@@ -326,7 +347,7 @@ color:#6a2e04;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    text-align: center;
     
 }
 
