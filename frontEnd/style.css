@@ -336,7 +336,7 @@ color:#6a2e04;
 }
 
 
-.historiaList{
+.historia-item{
 
   display: flex;
   flex-wrap: wrap;

@@ -63,7 +63,7 @@ async function buscarHistoria() {
                     <h3>História ${Historia.ID}</h3>
                     <br>
                     <p>${Historia.Historia}</p>
-                    <img src=${Historia.ImagemURL} alt=Imagem da história>`;
+                    <img src=${Historia.ImagemURL} alt=Imagem da história width="40%" height="40%">`;
                 bloco.appendChild(historiaElement);
                 console.log(Historia.ImagemURL)
             });
