@@ -56,19 +56,18 @@
 <nav class="form-container">
 
 <nav class="form-group">
-        <input type="text" id="historiaPalavra" placeholder="Digite uma palavra" />
+        <input type="text" id="palavraHistoria" placeholder="Digite uma palavra" />
 
 <p id="erroMensagem" style="color: brown; display: none;"> Erro ao buscar história</p>
 
 </nav>
 
-<button  onclick="buscarMensagem()"> PROCURAR HISTORIA </button>
+<button onclick="buscarHistoria()"> PROCURAR HISTORIA </button>
 
 
-<nav class="historiaList">
+<nav id="blocoHistorias" class="historiaList">
 
-    <p id="blocoTextoAleatorio"></p>
-<img id="imagemURL" src="" alt="imgHistoria">    
+   
 </nav>
 
 
