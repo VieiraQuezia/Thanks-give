@@ -49,25 +49,27 @@
 <article class="gratidao">
     <nav class="blocoGratidao">
 <p>
-    Nessa página, você pode buscar histórias inspiradoras escrevendo uma palavra. Clicando no botão abaixo, a página vai te mostrar a/as mensagem/ns e sua/s imagem/ns.
+    Nessa página, você pode buscar histórias inspiradoras escrevendo uma palavra. 
+    Clicando no botão abaixo, a página vai te mostrar a/as mensagem/ns e sua/s imagem/ns.
 </p>
 
 <nav class="form-container">
 
-    <nav class="form-group">
+<nav class="form-group">
         <input type="text" id="historiaPalavra" placeholder="Digite uma palavra" />
-<button  onclick="buscarMensagem()"> Procurar história inspiradora</button>
-<nav class="blocoAleatorio">
-
-    <p id="blocoTextoAleatorio"></p>
-    <p id="imagemURL"></p>
-    
-</nav>
 
 <p id="erroMensagem" style="color: brown; display: none;"> Erro ao buscar história</p>
 
 </nav>
 
+<button  onclick="buscarMensagem()"> PROCURAR HISTORIA </button>
+
+
+<nav class="historiaList">
+
+    <p id="blocoTextoAleatorio"></p>
+<img id="imagemURL" src="" alt="imgHistoria">    
+</nav>
 
 
 </nav>

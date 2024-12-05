@@ -252,22 +252,24 @@ justify-content: space-around;
 }
 
 /* Formulários */
+
 .form-group {
-  margin-bottom: 15px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
 
-.form-group input {
-  width: 100%;
-  padding: 8px;
+  padding: 5%;
+  padding-bottom: 3%;
 
   font-size: 14px;
 }
+
+.form-group input{
+  padding: 10%;
+}
+
+
 
 
 .blocoAleatorio{
@@ -313,6 +315,16 @@ color:#6a2e04;
 }
 
 
+.historiaList{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding-bottom: 3%;
+  padding-top: 3%;
+  gap: 40px;
+}
 
 
 .footer {
