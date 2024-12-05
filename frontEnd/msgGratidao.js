@@ -55,10 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // URL da API para buscar e adicionar mensagens
 const apiUrl = "http://localhost:3000/mensagem"; 
 
-// Função para mostrar um "spinner" enquanto os dados são carregados
-function showLoading(target) {
-  target.innerHTML = `<div class="spinner show"></div>`; // Exibe um "spinner" de carregamento
-}
+
 
 
 // Função assíncrona para buscar uma mensagem da API
