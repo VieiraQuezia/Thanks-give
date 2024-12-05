@@ -97,7 +97,7 @@ async function addMensagem() {
   // Valida os campos para garantir que estão preenchidos
   if (!Mensagem || !Tema) {
     alert("Por favor, preencha todos os campos.");  // Exibe um alerta se algum campo estiver vazio
-    return;
+    return; 
   }
 
   try {

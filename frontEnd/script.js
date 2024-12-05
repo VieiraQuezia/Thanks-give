@@ -39,11 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     Granada (Caribe), Libéria (África), Ilha Norfolk (Austrália) e Holanda (Europa).`
 
     let textoPortugues = document.getElementById("traduzir")
-    let texto = document.getElementById("texto")
+    let texto = document.getElementById("texto") // recebe o texto que está em inglês (por padrão, 'texto' já é em inglês)
 
     function tesxtoPortugues() {
         textoPortugues.innerHTML = portugues
-        texto.style.display = "none"
+        texto.style.display = "none" // ao clicar no botão português, o texto em inglês vira display none (fica oculto)
     }
 
 
