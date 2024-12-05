@@ -50,12 +50,12 @@ h5 {
   top: 18%; /* Define a posição vertical a 18% da altura do elemento pai */
   left: 50%; /* Define a posição horizontal a 50% da largura do elemento pai */
   width: 40em; /* Define uma largura fixa de 40em */
-  margin: 0 0 0 -20em; /* Alinha o parágrafo horizontalmente no centro, deslocando-o para a esquerda em 20em */
+  margin: -3% 0 0 -20em; /* Alinha o parágrafo horizontalmente no centro, deslocando-o para a esquerda em 20em */
 }
 
 /* Estilos para o span dentro do parágrafo */
 h5 span {
-  font: 700 4em/1 "Oswald", sans-serif; /* Define a fonte do texto como "Oswald", com peso 700 e tamanho 4em */
+  font: 700 6vh "Oswald", sans-serif; /* Define a fonte do texto como "Oswald", com peso 700 e tamanho 4em */
   padding: 0.25em 0 0.325em; /* Define o preenchimento superior e inferior */
   display: block; /* Torna o span um bloco de nível de bloco */
   margin: 0 auto; /* Centraliza o span horizontalmente */
@@ -292,6 +292,8 @@ color: #6a2e04;
 border: 2px  solid;
 border-radius: 10px ;
 
+margin-left: auto;
+margin-right: auto;
 
   width: 60%;
 
@@ -368,10 +370,6 @@ color:#6a2e04;
   color: aliceblue;
 }
 
-
-
-
-
 /* Definição da animação para o fundo do texto */
 @keyframes aitf {
   0% {
@@ -380,4 +378,54 @@ color:#6a2e04;
   100% {
     background-position: 100% 50%;
   } /* No final da animação, a posição do fundo está no fim */
+}
+
+@media screen and (max-width:720px) {
+
+  .bloco {
+    width: 60%;
+    height: 30%;
+    margin-left: 20%;
+  
+    border-radius: 5px;
+    border: 2px solid #6a2e04;
+  
+    background-color: #9f795e;
+    color: aliceblue;
+  
+    padding: 2%;
+    img {
+      margin-left: 15%
+    }
+    .img1 {
+      margin-left: 10%;
+    }
+  }
+
+  .mediaqueryindex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h5 {
+    font-size: 1.5vh;
+    margin-top: -20%;
+  }
+
+  .imagens{
+    display: flex;
+    flex-direction: column; 
+ img{
+
+        width: 60%;
+        height: 80%;
+
+        padding-top: 5%;
+
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;  
+ }
+}
+
 }
